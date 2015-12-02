@@ -19,6 +19,9 @@ allow shell pstorefs:file r_file_perms;
 allow shell misc_logd_file:dir r_dir_perms;
 allow shell misc_logd_file:file r_file_perms;
 
+# Root fs.
+allow shell rootfs:dir r_dir_perms;
+
 # read files in /data/anr
 allow shell anr_data_file:dir r_dir_perms;
 allow shell anr_data_file:file r_file_perms;
