@@ -184,3 +184,6 @@ ifelse(shipping_build, `true',
     neverallow { domain -vold -init -recovery } vold_data_file:notdevfile_class_set *;
     neverallow { domain -vold -init -recovery } restorecon_prop:property_service set;'
 )
+
+# MoveTask.cpp executes cp and rm
+allow vold toolbox_exec:file rx_file_perms;
